@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --themeClr: #533bd6;
+  --themeClrA: #02274e;
+  --themeClrB: #c2bdff;
+  --NavBgColor: #04060f;
+  --mainFontFam: "Oswald", sans-serif;
+  --secFontFam: "Yanone Kaffeesatz", sans-serif;
+}
+
+/*----------NAV BAR BEGINS HERE ------------*/
+
+.nav-bar {
+  background-image: linear-gradient(#02274e, #05060f);
+}
+nav {
+  display: flex;
+  padding: 0em 3em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*----------NAV BAR ENDS HERE ------------*/
+
+/*----------NAV BAR *LEFT* BEGINS HERE ------------*/
+.nav-links-left {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-links-left ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0em 2em;
+  position: relative;
+}
+
+.nav-links-left ul li a {
+  text-decoration: none;
+  color: var(--themeClrB);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--mainFontFam);
+}
+
+.nav-links-left ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--themeClrB);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-links-left a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/*THIS IS FOR HOVER FADE */
+/* .nav-links-left ul li:hover {
+    background-color: var(--themeClrB)
+}
+
+.nav-links-left ul li a:hover {
+    color: var(--NavBgColor);
+} */
+
+/*----------NAV BAR *LOGO* BEGINS HERE ------------*/
+
+nav img {
+  width: 170px;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+nav img:hover {
+  transform: scale(1.1);
+}
+
+/*----------NAV BAR *RIGHT* BEGINS HERE ------------*/
+.nav-links-rght {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-links-rght ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0em 2em;
+  position: relative;
+}
+
+.nav-links-rght ul li a {
+  text-decoration: none;
+  color: var(--themeClrB);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--mainFontFam);
+}
+
+.nav-links-rght ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: var(--themeClrB);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-links-rght a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/*----------NAV BAR ENDS HERE ------------*/
+
+/*----------BANNER BEGINS HERE ------------*/
+
+.hero-banner img {
+  object-fit: fill;
+  mix-blend-mode: multiply;
+  animation: fadein 1s forwards;
+
+  width: 100%;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-banner {
+  background-color: #830483;
+  width: 100%;
+  position: relative;
+}
+
+.hero-banner .banner-headline {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 15%;
+  text-align: justify;
+  text-align-last: center;
+  width: 70%;
+}
+
+.hero-banner .banner-headline h3 {
+  padding: 0px 80px;
+  line-height: 110%;
+  font-family: var(--secFontFam);
+  font-size: 50px;
+  color: #fff;
+}
+
+.hero-banner .banner-headline h4 {
+  padding: 40px 80px;
+  line-height: 110%;
+  font-family: var(--secFontFam);
+  font-size: 30px;
+  color: #fff;
+}
+
+.banner-headline h6 {
+  font-family: var(--secFontFam);
+  color: #fff;
+  font-size: 20px;
+}
