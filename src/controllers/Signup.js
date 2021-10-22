@@ -10,11 +10,12 @@ try {
   if (checkUserName) {
     res.render("registerFailedMessage");
   }
-
+  else {
   let newUser = new signUpSchema({ firstName, lastName, userName, password });
   await newUser.save()
   
   res.render("registerMessage"); 
+  }
 }
 catch {
     console.log("Something is wrong");
