@@ -188,7 +188,7 @@ h1 {
     font-size: 12px;
     }
   
-  input {
+input {
     background: transparent;
     width: 350px;
     padding: 1em;
@@ -204,7 +204,7 @@ h1 {
     font-weight: 500;
     transition: all 0.2s ease-in-out;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2)
-  }
+    }
 
 .su-submit input[type="button"],
 .su-submit input[type="submit"] {
