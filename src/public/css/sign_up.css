@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 * {
     margin:0;
     padding:0;
@@ -22,8 +22,7 @@
 /*----------NAV BAR BEGINS HERE ------------*/
 
 .nav-bar {
-    background-image: linear-gradient(#02274e, #05060f)
-    
+    background-image: linear-gradient(#02274e, #05060f);
   
 }
 nav {
@@ -142,43 +141,84 @@ nav img:hover { transform: scale(1.1); }
 
 /*----------NAV BAR ENDS HERE ------------*/
 
-/*----------BANNER BEGINS HERE ------------*/
+/*----------SIGN UP PAGE BEGINS HERE ------------*/
 
-.hero-banner img {
-    object-fit: fill;
-    mix-blend-mode: multiply;
-    animation: fadein 1s forwards;
-    position: absolute;
-    z-index: 2;
+.bg {
+    font-family: 'Montserrat', sans-serif;
     width: 100vw;
+    height: 100vh;
+    background: linear-gradient(137deg, #3a16c0 0%, #e31515 100%); 
 }
 
-@keyframes fadein {
-    from { opacity: 0;}
-    to { opacity: 1;}
-}
-
-.hero-banner {
-    background-color: #830483;
-    width: 100%;
-    position: relative;
-    z-index:1;
-}
-
-
-.hero-banner .SU-Form {
+.signup-pg {
     position: absolute;
-    z-index: 999;
-    max-width: 850px;
-    width: 100%;
-    /* background: #fff; */
-    padding: 40px 30px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    perspective: 2700px;
-    text-align: center;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
 }
 
-.SU-Form a{
+form {
+    background: $white;
+    padding: 3em;
+    height: 470px;
+    width: 500px;
+    border-radius: 20px;
+    border-left: 1px solid $white;
+    border-top: 1px solid $white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+h1 {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+  a {
     text-decoration: none;
-    color: black;
+    color: #ddd;
+    font-size: 12px;
+    }
+  
+  input {
+    background: transparent;
+    width: 350px;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: none;
+    border-left: 1px solid $white;
+    border-top: 1px solid $white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2)
+  }
+
+.su-submit input[type="button"],
+.su-submit input[type="submit"] {
+    cursor: pointer;
+}
+
+::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+h4 {
+    font-family: Montserrat, sans-serif;
+    color: #fff;
 }
