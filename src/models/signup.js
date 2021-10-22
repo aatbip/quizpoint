@@ -7,6 +7,11 @@ const userSchema = new schema ({
         type: String, 
         required: true
     },
+
+    // lastName: {
+    //     type: String, 
+    //     required: true
+    // },
     
     userName: {
         type: String, 

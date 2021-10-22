@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ {{>head_signup}}
+    
+</head>
+
+
+
+<body>
+   {{>navbar}}
+
+    <section class="hero-banner">
+        <div class="SU-Form">
+                <div class="forms">
+                    
+                    <div class="signup-form">
+                      <div class="title">Signup</div>
+                    <form action="/api/signup" method="POST">
+                        <div class="input-boxes">
+                          <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                          </div>
+                          <div class="input-box">
+                            <i class="fas fa-star"></i>
+                            <input type="text" name="userName" placeholder="Enter your username" required>
+                          </div>
+                          <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" placeholder="Enter your password" required>
+                          </div>
+                          {{!-- <div class="button input-box">
+                            <input type="submit" value="Sumbit" onclick="message()">
+                          </div> --}}
+                          <button type="submit" value="Submit">Sign up</button> 
+                          <div class="text sign-up-text">Already have an account?</div>
+                          <a>
+                              Login now 
+                          </a>
+                        </div>
+                  </form>
+                  <p>You are registered!</p>
+                </div>
+              </div>
+            
+        </div>
+    </section>
+
+
+</body>
+
+</html>
