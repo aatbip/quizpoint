@@ -3,9 +3,9 @@ const signUpSchema = require("../models/signup");
 
 const userSignUp = async (req, res) => {
   
-
+try {
   let { firstName, lastName, userName, password } = req.body;
-  const checkUserName = signUpSchema.findOne({ userName: userName });
+  const checkUserName = await signUpSchema.findOne({ userName: userName });
   
   if (checkUserName) {
     res.render("registerFailedMessage");
@@ -15,5 +15,9 @@ const userSignUp = async (req, res) => {
   await newUser.save()
   
   res.render("registerMessage"); 
+}
+catch {
+    console.log("Something is wrong");
+  }
 };
 module.exports = userSignUp;
