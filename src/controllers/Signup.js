@@ -1,13 +1,19 @@
-const signUpSchema = require("../models/signup"); 
+const signUpSchema = require("../models/signup");
+
 
 const userSignUp = async (req, res) => {
-   let { name, userName, password } = req.body; 
-   let newUser = new signUpSchema({ name, userName, password }); 
-   await newUser.save(); 
+  
 
-   res.json("You are registered"); 
+  let { firstName, lastName, userName, password } = req.body;
+  const checkUserName = signUpSchema.findOne({ userName: userName });
+  
+  if (checkUserName) {
+    res.render("registerFailedMessage");
+  }
 
-
-}
-module.exports = userSignUp; 
-
+  let newUser = new signUpSchema({ firstName, lastName, userName, password });
+  await newUser.save()
+  
+  res.render("registerMessage"); 
+};
+module.exports = userSignUp;
