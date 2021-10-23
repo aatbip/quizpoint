@@ -29,7 +29,7 @@ app.use(cors());
 
 app.use("/api", router);
 
-//renders
+//renders routes
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -41,6 +41,16 @@ app.get("/sign_up", (req, res) => {
 app.get("/api/sign_up", (req, res) => {
   res.render("sign_up"); 
 });
+
+app.get("/join_room"), (res) => {
+  res.render("join_room"); 
+}
+
+app.get("/about"), (res) => {
+  res.render("about"); 
+}
+
+
 
  
 
