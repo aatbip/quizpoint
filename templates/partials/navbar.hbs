@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    {{>head_index}}
+    {{>head_navbar}}
 </head>
+
 <body>
 
-<section class="nav-bar">
-    <nav>
-        <div class="nav-links-left">
-            <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="sign_up">SIGN UP</a></li>
+    <section class="nav-bar">
+        <nav>
+            <div class="nav-links-left">
+                <ul class="nav-ul" id="pages">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="sign_up">SIGN UP</a></li>
 
-            </ul>
-        </div>
+                </ul>
+            </div>
 
-        <a href="/"> <img src="/images/logo2.png" alt="QuizPoint Logo"></a>
+            <a href="/"> <img src="/images/logo2.png" alt="QuizPoint Logo"></a>
 
-        <div class="nav-links-rght">
-            <ul>
-                <li><a href="join_room">JOIN ROOM</a></li>
-                <li><a href="about">ABOUT</a></li>
-            </ul>
-        </div>
+            <div class="nav-links-rght">
+                <ul class="nav-ul" id="pages">
+                    <li><a href="join_room">JOIN ROOM</a></li>
+                    <li><a href="about">ABOUT</a></li>
+                </ul>
+            </div>
 
-    </nav>
-</section>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+        </nav>
+    </section>
 </body>
+
+<script>
+    function navFunction() {
+        var x = document.getElementsById("pages");
+        if (x.className === "nav-ul") {
+            x.className += "responsive";
+        } else {
+            x.className = "nav";
+        }
+    }
+
+</script>
+
 </html>

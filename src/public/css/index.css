@@ -150,7 +150,7 @@ nav img:hover {
 }
 
 .hero-banner {
-  background-color: #830483;
+  background: linear-gradient(137deg, #3a16c0 0%, #e31515 100%); 
   width: 100%;
   position: relative;
 }

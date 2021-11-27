@@ -35,24 +35,25 @@ app.get("/", (req, res) => {
 });
 
 app.get("/sign_up", (req, res) => {
-  res.render("sign_up"); 
+  res.render("sign_up");
 });
 
 app.get("/api/sign_up", (req, res) => {
-  res.render("sign_up"); 
+  res.render("sign_up");
 });
 
-app.get("/join_room"), (res) => {
-  res.render("join_room"); 
-}
+app.get("/join_room", (req, res) => {
+  res.render("join_room");
+});
 
-app.get("/about"), (res) => {
-  res.render("about"); 
-}
+app.get("/about", (res) => {
+  res.render("about");
+});
 
 
 
- 
+
+
 
 // Error handling middleware
 app.use(function (err, req, res, next) {
@@ -64,5 +65,5 @@ app.use(function (err, req, res, next) {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
-module.exports = app; 
-//module.exports = registerMsg; 
+module.exports = app;
+//module.exports = registerMsg;

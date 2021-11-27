@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*----------JOIN ROOM BUTTONS BEGINS HERE ------------*/
+
+.threefields-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 170px;
+    margin-top: 20px;
+
+}
+
+.threefields-btn img {
+    width: 150px;
+    transition: all .2s ease-in-out;
+}
+
+.threefields-btn img:hover {
+    transform: scale(1.1);
+
+}
+
+.threefields-btn-overlay img {
+    display: none;
+    width: 150px;
+    transition: all .2s ease-in-out;
+}
+
+/* .threefields-btn:hover + .threefields-btn-overlay { display:block }
+.threefields-btn:hover ~ .threefields-btn { display:none } */
+
+/*----------JOIN ROOM BUTTONS ENDS HERE ------------*/
+
+/*----------JOIN ROOM MAIN PAGE BEGINS HERE ------------*/
+.bg {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background: linear-gradient(137deg, #3a16c0 0%, #e31515 100%);
+    position: absolute;
+}
+
+.threefields-info {
+    display: grid;
+    grid-template-rows: 1, 1, 1;
+    margin-left: 170px;
+    margin-top: 20px;
+
+}
+
+.threefields-info a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.threefields-info p {
+    margin-top: 15px;
+}
+
+.threefields-info img {
+    width: 150px;
+}
+
+.threefieldsinfo-box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 180px;
+    background: $white;
+    padding: 3em;
+    height: 370px;
+    width: 500px;
+    border-radius: 20px;
+    border-left: 1px solid $white;
+    border-top: 1px solid $white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.threefieldsinfo-box:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(2, 39, 78, 0.5942576859845501) 35%, rgba(5, 6, 15, 0.46820726581648286) 100%)
+}
+
+
+/*----------JOIN ROOM MAIN PAGE ENDS HERE ------------*/
